@@ -1,14 +1,19 @@
 Portifolio:
 Infra de deploy para websites, container.
-lb
+lb - HPROXY
 ./configlb
-web1
-web2
+web1 - httpd
+web2 - httpd
 ./www
-db
+db - MYSQL
 ./dbconfig
+app - ubuntu
 
 network
 volume-web
 volume-db ./
 volume lb ./lb
+
+#APP
+Pega dados da API clima e tempo, a cada 1 minuto e insere no banco.
+API clima tempo:
